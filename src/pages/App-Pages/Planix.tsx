@@ -4,9 +4,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   ChevronLeft, ChevronRight, Download, Play, Calendar,
-  Bell, Star, Shield, Zap, Cloud, CheckCircle2,
-  ArrowRight, Code2, ExternalLink, User, Clock,
-  Layers, Sparkles, ArrowDown, LayoutDashboard,
+  Bell, Shield, Zap, Cloud, CheckCircle2, Sparkles,
+  Code2, ExternalLink, User,
+  ArrowDown,
 } from 'lucide-react';
 
 import planixLogo  from '../../assets/app-icons/Planix icon.png';
@@ -14,7 +14,6 @@ import homePage    from '../../assets/app-Interfaces/Planix/Plainx Home Page.jpe
 import calendarPage from '../../assets/app-Interfaces/Planix/Planix Calendar.jpeg';
 import addEventPage from '../../assets/app-Interfaces/Planix/Planix Add Event.jpeg';
 import appMockup   from '../../assets/app-Interfaces/Planix/app-mockup.png';
-import loginPage   from '../../assets/app-Interfaces/Planix/Plainx Login.jpeg';
 import profilePage from '../../assets/app-Interfaces/Planix/Plainx User Profile.jpeg';
 import alertPage   from '../../assets/app-Interfaces/Planix/Planix Alert Page.jpeg';
 

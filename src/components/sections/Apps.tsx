@@ -42,8 +42,8 @@ const appBadgeLabels: Record<string, string> = {
 
 // ─────────────────────────────────────────────────────────────────────────────
 
-const AppsSection = forwardRef<HTMLDivElement, {}>((_, ref) => {
-  const sectionRef = useRef<HTMLDivElement>(null);
+const AppsSection = forwardRef<HTMLElement, {}>((_, ref) => {
+  const sectionRef = useRef<HTMLElement>(null);
   const headerRef  = useRef<HTMLDivElement>(null);
   const cardsRef   = useRef<HTMLDivElement>(null);
 
@@ -77,7 +77,7 @@ const AppsSection = forwardRef<HTMLDivElement, {}>((_, ref) => {
   }, []);
 
   // ── Magnetic tilt ─────────────────────────────────────────────────────────
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>, el: HTMLDivElement) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>, el: HTMLElement) => {
     const rect = el.getBoundingClientRect();
     const dx = (e.clientX - rect.left - rect.width  / 2) / (rect.width  / 2);
     const dy = (e.clientY - rect.top  - rect.height / 2) / (rect.height / 2);
@@ -87,7 +87,7 @@ const AppsSection = forwardRef<HTMLDivElement, {}>((_, ref) => {
     });
   };
 
-  const handleMouseLeave = (el: HTMLDivElement) => {
+  const handleMouseLeave = (el: HTMLElement) => {
     gsap.to(el, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'power3.out' });
   };
 
@@ -97,7 +97,7 @@ const AppsSection = forwardRef<HTMLDivElement, {}>((_, ref) => {
       ref={(node) => {
         sectionRef.current = node!;
         if (typeof ref === 'function') ref(node);
-        else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
+        else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
       }}
       id="builds"
       style={{ padding: '64px 0 80px', position: 'relative' }}
@@ -228,14 +228,14 @@ const AppsSection = forwardRef<HTMLDivElement, {}>((_, ref) => {
                     display: 'flex',
                     flexDirection: 'column',
                   }}
-                  onMouseMove={(e) => handleMouseMove(e, e.currentTarget as HTMLDivElement)}
+                  onMouseMove={(e) => handleMouseMove(e, e.currentTarget as HTMLElement)}
                   onMouseEnter={(e) => {
-                    const el = e.currentTarget as HTMLDivElement;
+                    const el = e.currentTarget as HTMLElement;
                     el.style.borderColor   = 'rgba(166,136,50,0.22)';
                     el.style.boxShadow     = 'var(--shadow-hover)';
                   }}
                   onMouseLeave={(e) => {
-                    const el = e.currentTarget as HTMLDivElement;
+                    const el = e.currentTarget as HTMLElement;
                     el.style.borderColor = 'var(--surface-border)';
                     el.style.boxShadow   = 'var(--shadow-card)';
                     handleMouseLeave(el);

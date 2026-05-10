@@ -34,8 +34,8 @@ const animateCount = (el: HTMLElement, target: number, suffix: string) => {
 
 // ─── Component ───────────────────────────────────────────────────────────────
 
-const GithubProfile = forwardRef<HTMLDivElement, {}>((_, ref) => {
-  const sectionRef  = useRef<HTMLDivElement>(null);
+const GithubProfile = forwardRef<HTMLElement, {}>((_, ref) => {
+  const sectionRef  = useRef<HTMLElement>(null);
   const cardRef     = useRef<HTMLDivElement>(null);
   const avatarRef   = useRef<HTMLDivElement>(null);
   const ringRef     = useRef<HTMLDivElement>(null);
@@ -123,7 +123,7 @@ const GithubProfile = forwardRef<HTMLDivElement, {}>((_, ref) => {
       ref={(node) => {
         sectionRef.current = node!;
         if (typeof ref === 'function') ref(node);
-        else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
+        else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
       }}
       style={{ padding: '64px 0 80px', position: 'relative' }}
     >
@@ -406,7 +406,7 @@ const GithubProfile = forwardRef<HTMLDivElement, {}>((_, ref) => {
             }}
             className="github-stats-grid"
           >
-            {stats.map(({ icon: Icon, label, value, suffix }, i) => (
+            {stats.map(({ icon: Icon, label, suffix }, i) => (
               <div
                 key={label}
                 className="stat-card"

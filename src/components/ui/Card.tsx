@@ -2,13 +2,14 @@ import { forwardRef, useRef } from 'react';
 import type { ReactNode } from 'react';
 import gsap from 'gsap';
 
-interface CardProps {
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   className?: string;
   interactive?: boolean;
   /** Subtle accent glow color on hover, e.g. 'rgba(201,168,76,0.15)' */
   glowColor?: string;
   variant?: 'default' | 'raised' | 'bordered' | 'glass';
+  style?: React.CSSProperties;
 }
 
 const Card = forwardRef<HTMLDivElement, CardProps>(

@@ -5,8 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Portfolio = forwardRef<HTMLDivElement, {}>((_, ref) => {
-  const sectionRef  = useRef<HTMLDivElement>(null);
+const Portfolio = forwardRef<HTMLElement, {}>((_, ref) => {
+  const sectionRef  = useRef<HTMLElement>(null);
   const bannerRef   = useRef<HTMLDivElement>(null);
   const textRef     = useRef<HTMLDivElement>(null);
   const imageRef    = useRef<HTMLDivElement>(null);
@@ -67,7 +67,7 @@ const Portfolio = forwardRef<HTMLDivElement, {}>((_, ref) => {
       ref={(node) => {
         sectionRef.current = node!;
         if (typeof ref === 'function') ref(node);
-        else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
+        else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
       }}
       className="section-gap relative"
     >

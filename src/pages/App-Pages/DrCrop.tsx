@@ -68,7 +68,8 @@ const AUDIENCES = [
 ];
 
 // ─── Phone Frame ────────────────────────────────────────────────────────────
-const PhoneFrame = ({ src, alt, className = '', style = {}, onMouseEnter = undefined, onMouseLeave = undefined }) => (
+interface PhoneFrameProps { src?: string; alt?: string; className?: string; style?: React.CSSProperties; onMouseEnter?: React.MouseEventHandler<HTMLDivElement>; onMouseLeave?: React.MouseEventHandler<HTMLDivElement>; }
+const PhoneFrame = ({ src, alt, className = '', style = {}, onMouseEnter = undefined, onMouseLeave = undefined }: PhoneFrameProps) => (
   <div
     className={`dc-phone ${className}`}
     onMouseEnter={onMouseEnter}
@@ -123,7 +124,7 @@ const DrCrop = () => {
       });
 
       // ── phone frames — staggered fan-in ──
-      gsap.utils.toArray('.dc-phone').forEach((el: Element, i) => {
+      gsap.utils.toArray('.dc-phone').forEach((el: any, i) => {
         const rotate = (i % 3 - 1) * 5;
         gsap.fromTo(el,
           { y: 80, opacity: 0, rotation: rotate * 2 },
@@ -140,7 +141,7 @@ const DrCrop = () => {
       });
 
       // ── scroll-reveal sections ──
-      gsap.utils.toArray('.dc-reveal').forEach((el: Element) => {
+      gsap.utils.toArray('.dc-reveal').forEach((el: any) => {
         gsap.fromTo(el,
           { y: 56, opacity: 0 },
           {
@@ -150,7 +151,7 @@ const DrCrop = () => {
         );
       });
 
-      gsap.utils.toArray('.dc-stagger').forEach((container: Element) => {
+      gsap.utils.toArray('.dc-stagger').forEach((container: any) => {
         if (container.children.length) {
           gsap.fromTo(container.children,
             { y: 40, opacity: 0 },
@@ -163,7 +164,7 @@ const DrCrop = () => {
       });
 
       // ── stat number count-up — preserve full original string ──
-      gsap.utils.toArray('.dc-stat-val').forEach((el: HTMLElement) => {
+      gsap.utils.toArray('.dc-stat-val').forEach((el: any) => {
         ScrollTrigger.create({
           trigger: el,
           start: 'top 88%',
@@ -191,7 +192,7 @@ const DrCrop = () => {
       if (strip) gsap.to(strip, { x: '-50%', duration: 28, ease: 'none', repeat: -1 });
 
       // ── feature cards ──
-      gsap.utils.toArray('.dc-feat').forEach((el: Element, i) => {
+      gsap.utils.toArray('.dc-feat').forEach((el: any, i) => {
         gsap.fromTo(el,
           { y: 50, opacity: 0, scale: 0.96 },
           {
@@ -207,7 +208,7 @@ const DrCrop = () => {
     return () => ctx.revert();
   }, []);
 
-  const handlePhoneHover = (e, enter: boolean) => {
+  const handlePhoneHover = (e: React.MouseEvent, enter: boolean) => {
     gsap.to(e.currentTarget, {
       scale: enter ? 1.04 : 1,
       duration: enter ? 0.3 : 0.4,

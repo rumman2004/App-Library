@@ -6,7 +6,7 @@ import Portfolio from '../components/sections/Portfolio';
 import Socials from '../components/sections/Socials';
 
 const Home = () => {
-  const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const sectionsRef = useRef<(HTMLElement | null)[]>([]);
 
   return (
     <div className="flex flex-col w-full">
