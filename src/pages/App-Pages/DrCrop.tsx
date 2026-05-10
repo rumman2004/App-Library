@@ -693,7 +693,7 @@ const DrCrop = () => {
 
               <div className="dc-h-anim dc-hero-ctas" style={{ marginTop: '2rem' }}>
                 <a href="https://expo.dev/artifacts/eas/gnDW8pP3P6QFesrWSjSewa.apk" className="dc-btn-primary">
-                  <ArrowDown style={{ width: 16, height: 16 }} /> APK Download
+                  <ArrowDown style={{ width: 16, height: 16 }} /> Download APK 
                 </a>
                 <a href="https://dr-crop-ecru.vercel.app/" className="dc-btn-outline">
                   <Play style={{ width: 14, height: 14 }} /> Live Demo
@@ -1132,7 +1132,7 @@ const DrCrop = () => {
             </p>
             <div className="dc-cta-btns">
               <a href="https://expo.dev/artifacts/eas/gnDW8pP3P6QFesrWSjSewa.apk" className="dc-btn-primary">
-                <Download style={{ width: 16, height: 16 }} /> Get Started
+                <Download style={{ width: 16, height: 16 }} /> Download Now
               </a>
               <a href="https://github.com/rumman2004" target="_blank" rel="noopener noreferrer" className="dc-btn-outline">
                 <Code2 style={{ width: 15, height: 15 }} /> GitHub
