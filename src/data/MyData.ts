@@ -1,3 +1,5 @@
+import { Images } from './images';
+
 export const myData = {
   name: 'Rumman Ahmed',
   nickname: 'Ryuu',
@@ -19,7 +21,7 @@ export const myData = {
   portfolioUrl: 'https://rumman-portfolio-ryuu.vercel.app/',
 
   resume: '',
-  avatar: '/images/profile.png',
+  avatar: Images.general.avatar,
 
   skills: [
     'React Native',

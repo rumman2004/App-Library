@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useRef } from 'react';
 import { ArrowDown, ArrowUpRight, Sparkles } from 'lucide-react';
 import gsap from 'gsap';
-import iphoneMockup from '../../assets/images/iphone-mockup.png';
+import { Images } from '../../data/images';
 
 const HeroSection = forwardRef<HTMLDivElement, {}>((_, ref) => {
   const phoneRef     = useRef<HTMLDivElement>(null);
@@ -620,7 +620,7 @@ const HeroSection = forwardRef<HTMLDivElement, {}>((_, ref) => {
                 style={{ rotate: '-6deg', transformOrigin: 'center bottom' }}
               >
                 <img
-                  src={iphoneMockup}
+                  src={Images.general.heroIphone}
                   alt="iPhone Mockup"
                   className="hero-phone-img"
                   draggable={false}

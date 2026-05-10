@@ -9,11 +9,7 @@ import {
   Cpu, Sparkles,
 } from 'lucide-react';
 
-import darkTheme    from '../../assets/app-Interfaces/Calculator/Calculator Dark theme.jpeg';
-import lightTheme   from '../../assets/app-Interfaces/Calculator/Calculator Light theme.jpeg';
-import historyImg   from '../../assets/app-Interfaces/Calculator/Calculator history.jpeg';
-import mockupImg    from '../../assets/app-Interfaces/Calculator/App-mockup.png';
-import appIcon      from '../../assets/app-icons/Calculator icon.png';
+import { Images } from '../../data/images';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -696,7 +692,7 @@ const MyCalculator = () => {
                   flexShrink: 0,
                   boxShadow: '-6px -6px 14px rgba(255,255,255,0.05), 6px 6px 18px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,107,53,0.15)',
                 }}>
-                  <img src={appIcon} alt="Calculator icon" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={Images.calculator.icon} alt="Neumorphic Calculator Icon" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div>
                   <div style={{
@@ -758,7 +754,7 @@ const MyCalculator = () => {
                 }} />
                 <div style={{ position: 'relative', zIndex: 1 }}>
                   <img
-                    src={mockupImg}
+                    src={Images.calculator.mockup}
                     alt="Calculator App Mockup"
                     style={{ width: 'clamp(180px, 50vw, 420px)', display: 'block', userSelect: 'none' }}
                     draggable={false}
@@ -848,7 +844,7 @@ const MyCalculator = () => {
                     </div>
                   ))}
                 </div>
-                <Phone src={darkTheme} alt="Dark theme" style={{ width: '100%', maxWidth: 200, margin: '0 auto', display: 'block' }} />
+                <Phone src={Images.calculator.dark} alt="Dark theme" style={{ width: '100%', maxWidth: 200, margin: '0 auto', display: 'block' }} />
               </div>
 
               {/* Light card */}
@@ -883,7 +879,7 @@ const MyCalculator = () => {
                     </div>
                   ))}
                 </div>
-                <Phone src={lightTheme} alt="Light theme" style={{ width: '100%', maxWidth: 200, margin: '0 auto', display: 'block' }} />
+                <Phone src={Images.calculator.light} alt="Light theme" style={{ width: '100%', maxWidth: 200, margin: '0 auto', display: 'block' }} />
               </div>
             </div>
           </div>
@@ -937,7 +933,7 @@ const MyCalculator = () => {
             {/* Phone — top on mobile */}
             <div className="nc-reveal nc-hist-phone">
               <div className="nc-history-card">
-                <img src={historyImg} alt="History panel" style={{ width: 'clamp(160px, 40vw, 280px)', display: 'block' }} />
+                <img src={Images.calculator.history} alt="History panel" style={{ width: 'clamp(160px, 40vw, 280px)', display: 'block' }} />
               </div>
             </div>
 

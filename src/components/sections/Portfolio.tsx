@@ -2,6 +2,7 @@ import { forwardRef, useEffect, useRef } from 'react';
 import { ArrowUpRight, Layers } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Images } from '../../data/images';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -232,7 +233,7 @@ const Portfolio = forwardRef<HTMLElement, {}>((_, ref) => {
                 }}
               >
                 <img
-                  src="/src/assets/images/portfolio.png"
+                  src={Images.general.portfolio}
                   alt="Portfolio Preview"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />

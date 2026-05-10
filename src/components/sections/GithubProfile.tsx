@@ -1,5 +1,6 @@
 import { forwardRef, useEffect, useRef } from 'react';
 import { Star, GitFork, Users, ArrowUpRight, GitCommit, Code2 } from 'lucide-react';
+import { Images } from '../../data/images';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Card from '../../components/ui/Card';
@@ -249,7 +250,7 @@ const GithubProfile = forwardRef<HTMLElement, {}>((_, ref) => {
 
                 <div ref={avatarRef} style={{ position: 'relative' }}>
                   <img
-                    src="/src/assets/images/avatar.jpeg"
+                    src={Images.general.avatar}
                     alt="Rumman Ahmed"
                     style={{
                       width: '136px',

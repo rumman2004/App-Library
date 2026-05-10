@@ -9,15 +9,7 @@ import {
   Sprout, FlaskConical, GraduationCap, Users, ChevronRight, ArrowDown,
 } from 'lucide-react';
 
-import appMockup   from '../../assets/app-Interfaces/Dr Crop/app mockup.png';
-import homePage    from '../../assets/app-Interfaces/Dr Crop/Dr Crop Home Page.jpeg';
-import historyPage from '../../assets/app-Interfaces/Dr Crop/Dr Crop History Page.jpeg';
-import journalPage from '../../assets/app-Interfaces/Dr Crop/Dr Crop Jurnal Page.jpeg';
-import splashPage  from '../../assets/app-Interfaces/Dr Crop/dr crop opening splash.jpeg';
-import scanPage    from '../../assets/app-Interfaces/Dr Crop/Scan Page.jpeg';
-import galleryPage from '../../assets/app-Interfaces/Dr Crop/Select image from galary.jpeg';
-import profilePage from '../../assets/app-Interfaces/Dr Crop/User Profile Dr Crop.jpeg';
-import appIcon     from '../../assets/app-icons/Dr Crop icon.png';
+import { Images } from '../../data/images';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -669,8 +661,7 @@ const DrCrop = () => {
             {/* Text block */}
             <div>
               <div className="dc-h-anim" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-                <img src={appIcon} alt="Dr. Crop icon" style={{
-                  width: 60, height: 60, borderRadius: '1.2rem', flexShrink: 0,
+                <img src={Images.drCrop.icon} alt="Dr. Crop Icon" style={{ width: 60, height: 60, borderRadius: '1.2rem', flexShrink: 0,
                   border: '1px solid rgba(74,222,128,0.2)',
                   boxShadow: '0 8px 32px rgba(0,0,0,0.4), 0 0 20px rgba(74,222,128,0.08)',
                 }} />
@@ -725,13 +716,13 @@ const DrCrop = () => {
             {/* Mockup */}
             <div className="dc-hero-mockup-wrap">
               <div ref={mockupRef} style={{
-                filter: 'drop-shadow(0 40px 80px rgba(0,0,0,0.7)) drop-shadow(0 0 40px rgba(34,197,94,0.08))',
+                filter: 'drop-shadow(0 30px 60px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(34,197,94,0.08))',
                 willChange: 'transform',
               }}>
                 <img
-                  src={appMockup}
+                  src={Images.drCrop.mockup}
                   alt="Dr. Crop App Mockup"
-                  style={{ width: 'clamp(220px, 55vw, 420px)', display: 'block', userSelect: 'none' }}
+                  style={{ width: 'clamp(280px, 60vw, 750px)', display: 'block', userSelect: 'none' }}
                   draggable={false}
                 />
               </div>
@@ -752,7 +743,7 @@ const DrCrop = () => {
                   style={{
                     fontFamily: "'Syne', sans-serif",
                     fontSize: 'clamp(1.8rem, 5vw, 2.6rem)', fontWeight: 800,
-                    color: 'var(--g)', lineHeight: 1, marginBottom: '0.5rem',
+                    color: 'var(--g)', lineHeight: 1, marginBottom: '0.55rem',
                   }}
                 >
                   {value}
@@ -777,17 +768,17 @@ const DrCrop = () => {
             {/* Phone gallery */}
             <div className="dc-phones-side dc-reveal">
               <div className="dc-phones-row">
-                <PhoneFrame src={splashPage} alt="Splash Screen"
-                  style={{ transform: 'rotate(-5deg)', transformOrigin: 'center bottom' }}
+                <PhoneFrame src={Images.drCrop.splash} alt="Splash Screen"
+                  style={{ transform: 'rotate(-4deg)', transformOrigin: 'center bottom' }}
                   onMouseEnter={e => handlePhoneHover(e, true)}
                   onMouseLeave={e => handlePhoneHover(e, false)}
                 />
-                <PhoneFrame src={homePage} alt="Home Screen"
+                <PhoneFrame src={Images.drCrop.home} alt="Home Screen"
                   onMouseEnter={e => handlePhoneHover(e, true)}
                   onMouseLeave={e => handlePhoneHover(e, false)}
                 />
-                <PhoneFrame src={scanPage} alt="Scan Screen"
-                  style={{ transform: 'rotate(5deg)', transformOrigin: 'center bottom' }}
+                <PhoneFrame src={Images.drCrop.scan} alt="Scan Screen"
+                  style={{ transform: 'rotate(6deg)', transformOrigin: 'center bottom' }}
                   onMouseEnter={e => handlePhoneHover(e, true)}
                   onMouseLeave={e => handlePhoneHover(e, false)}
                 />
@@ -854,12 +845,12 @@ const DrCrop = () => {
 
             <div className="dc-phones-side dc-reveal">
               <div className="dc-phones-row">
-                <PhoneFrame src={galleryPage} alt="Gallery"
-                  style={{ transform: 'rotate(-4deg)', transformOrigin: 'center bottom' }}
+                <PhoneFrame src={Images.drCrop.gallery} alt="Gallery"
+                  style={{ transform: 'rotate(-2deg)', transformOrigin: 'center bottom' }}
                   onMouseEnter={e => handlePhoneHover(e, true)}
                   onMouseLeave={e => handlePhoneHover(e, false)}
                 />
-                <PhoneFrame src={scanPage} alt="Scan"
+                <PhoneFrame src={Images.drCrop.scan} alt="Scan"
                   style={{ transform: 'rotate(4deg)', transformOrigin: 'center bottom' }}
                   onMouseEnter={e => handlePhoneHover(e, true)}
                   onMouseLeave={e => handlePhoneHover(e, false)}
@@ -877,12 +868,12 @@ const DrCrop = () => {
 
             <div className="dc-phones-side dc-reveal">
               <div className="dc-phones-row">
-                <PhoneFrame src={historyPage} alt="History"
+                <PhoneFrame src={Images.drCrop.history} alt="History"
                   style={{ transform: 'rotate(-4deg)', transformOrigin: 'center bottom' }}
                   onMouseEnter={e => handlePhoneHover(e, true)}
                   onMouseLeave={e => handlePhoneHover(e, false)}
                 />
-                <PhoneFrame src={profilePage} alt="Profile"
+                <PhoneFrame src={Images.drCrop.profile} alt="Profile"
                   style={{ transform: 'rotate(4deg)', transformOrigin: 'center bottom' }}
                   onMouseEnter={e => handlePhoneHover(e, true)}
                   onMouseLeave={e => handlePhoneHover(e, false)}
@@ -1086,17 +1077,17 @@ const DrCrop = () => {
 
             <div className="dc-gallery-row">
               {[
-                { src: splashPage,  alt: 'Splash',   label: 'Splash',          offsetY: 40, scale: 0.88, rot: -4,  edge: true  },
-                { src: homePage,    alt: 'Home',      label: 'Dashboard',       offsetY: 16, scale: 0.94, rot: -2,  edge: false },
-                { src: scanPage,    alt: 'Scan',      label: 'Scan & Diagnose', offsetY: 0,  scale: 1,    rot: 0,   edge: false },
-                { src: historyPage, alt: 'History',   label: 'History',         offsetY: 16, scale: 0.94, rot: 2,   edge: false },
-                { src: journalPage, alt: 'Journal',   label: 'Journal',         offsetY: 40, scale: 0.88, rot: 4,   edge: true  },
-              ].map(({ src, alt, label, offsetY, scale, rot, edge }) => (
+                { src: Images.drCrop.home,    alt: 'Home Dashboard', label: 'Dashboard',   rot: -5, edge: true  },
+                { src: Images.drCrop.scan,    alt: 'Plant Scanner',  label: 'AI Scanner',  rot: 2,  edge: false },
+                { src: Images.drCrop.history, alt: 'History Log',    label: 'History',     rot: -3, edge: false },
+                { src: Images.drCrop.journal, alt: 'Journal',        label: 'Journal',     rot: 6,  edge: false },
+                { src: Images.drCrop.profile, alt: 'User Profile',   label: 'Profile',     rot: 4,  edge: true  },
+              ].map(({ src, alt, label, rot, edge }) => (
                 <div
                   key={alt}
                   className={`dc-gallery-item${edge ? ' edge' : ''}`}
                   style={{
-                    transform: `translateY(${offsetY}px) rotate(${rot}deg) scale(${scale})`,
+                    transform: `rotate(${rot}deg)`,
                     transformOrigin: 'center bottom',
                     transition: 'transform 0.4s cubic-bezier(0.22,1,0.36,1)',
                     position: 'relative',

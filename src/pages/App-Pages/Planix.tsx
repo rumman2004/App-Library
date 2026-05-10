@@ -9,13 +9,7 @@ import {
   ArrowDown,
 } from 'lucide-react';
 
-import planixLogo  from '../../assets/app-icons/Planix icon.png';
-import homePage    from '../../assets/app-Interfaces/Planix/Plainx Home Page.jpeg';
-import calendarPage from '../../assets/app-Interfaces/Planix/Planix Calendar.jpeg';
-import addEventPage from '../../assets/app-Interfaces/Planix/Planix Add Event.jpeg';
-import appMockup   from '../../assets/app-Interfaces/Planix/app-mockup.png';
-import profilePage from '../../assets/app-Interfaces/Planix/Plainx User Profile.jpeg';
-import alertPage   from '../../assets/app-Interfaces/Planix/Planix Alert Page.jpeg';
+import { Images } from '../../data/images';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,11 +38,11 @@ const TECH = [
 ];
 
 const SCREENS = [
-  { src: homePage,     alt: 'Dashboard',   label: 'Dashboard',      rot: -6 },
-  { src: calendarPage, alt: 'Calendar',    label: 'Calendar',       rot: -2 },
-  { src: addEventPage, alt: 'Add Event',   label: 'Event Creation', rot: 4  },
-  { src: alertPage,    alt: 'Alerts',      label: 'Reminders',      rot: 7  },
-  { src: profilePage,  alt: 'Profile',     label: 'User Profile',   rot: 8  },
+  { src: Images.planix.home,         alt: 'Dashboard',   label: 'Dashboard',      rot: -6 },
+  { src: Images.planix.calendar,     alt: 'Calendar',    label: 'Calendar',       rot: -2 },
+  { src: Images.planix.addEvent,     alt: 'Add Event',   label: 'Event Creation', rot: 4  },
+  { src: Images.planix.alert,        alt: 'Alerts',      label: 'Reminders',      rot: 7  },
+  { src: Images.planix.profile,      alt: 'Profile',     label: 'User Profile',   rot: 8  },
 ];
 
 const SECTIONS = [
@@ -58,7 +52,7 @@ const SECTIONS = [
     accent: 'beautifully organized.',
     body: 'The dashboard gives users an instant overview of their day — upcoming events, weekly stats, and smart reminders displayed in a calm, focused layout.',
     bullets: ['Personalized greetings', 'Real-time event overview', 'Weekly activity tracking', 'Smart upcoming reminders'],
-    img: homePage,
+    img: Images.planix.home,
     imgAlt: 'Dashboard Screen',
   },
   {
@@ -67,7 +61,7 @@ const SECTIONS = [
     accent: 'Miss nothing.',
     body: 'A modern calendar with clean grid layouts, event indicators, and smooth navigation. Every date is one tap away.',
     bullets: ['Interactive monthly view', 'Event dot indicators', 'Daily schedule panel', 'Fast event access'],
-    img: calendarPage,
+    img: Images.planix.calendar,
     imgAlt: 'Calendar Screen',
     reverse: true,
   },
@@ -77,7 +71,7 @@ const SECTIONS = [
     accent: 'in seconds.',
     body: 'Birthdays, meetings, tasks, or reminders — creation is simple, fast, and visually satisfying with color categorization and rich detail options.',
     bullets: ['Multi-event type support', 'Color categorization', 'All-day scheduling', 'Smart reminders'],
-    img: addEventPage,
+    img: Images.planix.addEvent,
     imgAlt: 'Add Event Screen',
   },
 ];
@@ -743,7 +737,7 @@ const Planix = () => {
                   boxShadow: '0 8px 28px rgba(13,115,119,0.18)',
                   flexShrink: 0,
                 }}>
-                  <img src={planixLogo} alt="Planix Logo" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src={Images.planix.logo} alt="Planix Logo" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div>
                   <div style={{
@@ -806,7 +800,7 @@ const Planix = () => {
                 willChange: 'transform',
               }}>
                 <img
-                  src={appMockup}
+                  src={Images.planix.mockup}
                   alt="Planix App Mockup"
                   style={{ width: 'clamp(200px, 45vw, 420px)', display: 'block', userSelect: 'none' }}
                   draggable={false}

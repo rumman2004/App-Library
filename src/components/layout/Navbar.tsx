@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowUpRight, Download, Menu, X } from 'lucide-react';
+import { Images } from '../../data/images';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
@@ -199,7 +200,7 @@ const Navbar = () => {
       }}
     >
       <img
-        src="/src/assets/images/avatar.jpeg"
+        src={Images.general.avatar}
         alt="Rumman Ahmed"
         style={{
           width: '100%',

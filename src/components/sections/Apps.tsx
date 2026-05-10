@@ -1,6 +1,7 @@
 import { forwardRef, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Layers } from 'lucide-react';
+import { Images } from '../../data/images';
 import { appsData } from '../../data/apps';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,9 +11,9 @@ import Badge from '../../components/ui/Badge';
 gsap.registerPlugin(ScrollTrigger);
 
 const appImages: Record<string, string> = {
-  'dr-crop':       '/src/assets/app-icons/Dr Crop icon.png',
-  'my-calculator': '/src/assets/app-icons/Calculator icon.png',
-  'planix':        '/src/assets/app-icons/Planix icon.png',
+  'dr-crop':       Images.drCrop.icon,
+  'my-calculator': Images.calculator.icon,
+  'planix':        Images.planix.logo,
 };
 
 const appAccents: Record<string, string> = {

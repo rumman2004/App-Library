@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { Images } from '../../data/images';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { socialLinks } from '../../data/Socials';
 import Badge from '../../components/ui/Badge';
@@ -241,7 +242,7 @@ const Footer = () => {
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = `${theme.accent}80`; }}
               >
                 <img
-                  src="/src/assets/images/avatar.jpeg"
+                  src={Images.general.avatar}
                   alt="Rumman Ahmed"
                   style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover', display: 'block' }}
                   onError={(e) => {
