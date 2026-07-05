@@ -1,3 +1,10 @@
+// --- Antinode (local assets) ---
+import antinodeIcon     from '../assets/app-icons/Antinode icon.png';
+import antinodeMockup   from '../assets/app-Interfaces/Antinode/App-mockup.png';
+import antinodeHome     from '../assets/app-Interfaces/Antinode/Antinode-home.png';
+import antinodeFolders  from '../assets/app-Interfaces/Antinode/Antinode-folders.png';
+import antinodeProfile  from '../assets/app-Interfaces/Antinode/Aninode-userprofile.png';
+
 // --- Planix ---
 const planixLogo = 'https://res.cloudinary.com/dtbytfxzs/image/upload/v1778440321/Planix_icon_fmjrxh.png';
 const planixHomePage = 'https://res.cloudinary.com/dtbytfxzs/image/upload/v1778440359/Plainx_Home_Page_b06gre.jpg';
@@ -57,6 +64,13 @@ export const Images = {
     scan: drCropScanPage,
     gallery: drCropGalleryPage,
     profile: drCropProfilePage,
+  },
+  antinode: {
+    icon: antinodeIcon,
+    mockup: antinodeMockup,
+    home: antinodeHome,
+    folders: antinodeFolders,
+    profile: antinodeProfile,
   },
   general: {
     heroIphone: heroIphoneMockup,

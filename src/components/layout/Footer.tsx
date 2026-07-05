@@ -52,7 +52,7 @@ const icons: Record<string, (props: { size?: number }) => React.ReactNode> = {
 
 // ── Route-aware theme detection ───────────────────────────────────────────────
 
-const DARK_ROUTES  = ['/apps/dr-crop', '/apps/drcrop', '/apps/my-calculator'];
+const DARK_ROUTES  = ['/apps/dr-crop', '/apps/drcrop', '/apps/my-calculator', '/apps/antinode'];
 const CREAM_ROUTES = ['/apps/planix'];
 
 type FooterTheme = 'default' | 'dark' | 'cream';

@@ -14,18 +14,21 @@ const appImages: Record<string, string> = {
   'dr-crop':       Images.drCrop.icon,
   'my-calculator': Images.calculator.icon,
   'planix':        Images.planix.logo,
+  'antinode':      Images.antinode.icon,
 };
 
 const appAccents: Record<string, string> = {
   'dr-crop':       'rgba(76,175,129,0.12)',
   'my-calculator': 'rgba(79,124,255,0.12)',
   'planix':        'rgba(201,168,76,0.12)',
+  'antinode':      'rgba(37,99,255,0.12)',
 };
 
 const appAccentColors: Record<string, string> = {
   'dr-crop':       '#4caf81',
   'my-calculator': '#4f7cff',
   'planix':        '#c9a84c',
+  'antinode':      '#5b8dff',
 };
 
 /** Maps app id to the Badge variant that suits it */
@@ -33,12 +36,14 @@ const appBadgeVariants: Record<string, 'green' | 'blue' | 'gold'> = {
   'dr-crop':       'green',
   'my-calculator': 'blue',
   'planix':        'gold',
+  'antinode':      'blue',
 };
 
 const appBadgeLabels: Record<string, string> = {
   'dr-crop':       'Active',
   'my-calculator': 'v2',
   'planix':        'New',
+  'antinode':      'New',
 };
 
 // ─────────────────────────────────────────────────────────────────────────────

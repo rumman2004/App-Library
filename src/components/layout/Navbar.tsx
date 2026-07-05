@@ -14,7 +14,7 @@ const navLinks = [
 
 // ─── Detect if we're on a dark app detail page ────────────────────────────────
 // Add any dark-themed app routes here
-const DARK_ROUTES = ['/apps/dr-crop', '/apps/drcrop', '/apps/my-calculator'];
+const DARK_ROUTES = ['/apps/dr-crop', '/apps/drcrop', '/apps/my-calculator', '/apps/antinode'];
 const isDarkRoute = (pathname: string) =>
   DARK_ROUTES.some(r => pathname.startsWith(r));
 

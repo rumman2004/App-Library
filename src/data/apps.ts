@@ -1,4 +1,4 @@
-import { Crop, Calculator, LayoutDashboard } from 'lucide-react';
+import { Crop, Calculator, LayoutDashboard, FolderLock } from 'lucide-react';
 
 export interface AppInfo {
   id: string;
@@ -72,5 +72,24 @@ export const appsData: AppInfo[] = [
     version: '1.0.5',
     releaseDate: 'March 2026',
     color: 'from-rose-400 to-orange-500',
+  },
+  {
+    id: 'antinode',
+    name: 'Antinode',
+    shortDescription: 'Centralized, secure notes & document manager with a live cloud backend.',
+    fullDescription: 'Antinode is a modern, high-performance mobile app that centralizes your digital workspace. Create folders, upload documents, and organize notes in one secure hub — backed by JWT authentication and a live AWS EC2 cloud server, all wrapped in a premium, distraction-free design.',
+    icon: FolderLock,
+    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800',
+    features: [
+      'Secure JWT authentication',
+      'Smart folder & file management',
+      'Live AWS EC2 cloud backend',
+      'Premium minimalist UI with micro-animations'
+    ],
+    techStack: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'AWS'],
+    downloadUrl: 'https://drive.google.com/file/d/1fGlz5E20LyGignmI8o9-SlgbVHE3i5ZR/view?usp=sharing',
+    version: '1.0.0',
+    releaseDate: 'July 2026',
+    color: 'from-blue-400 to-indigo-600',
   }
 ];
