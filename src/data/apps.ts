@@ -1,4 +1,4 @@
-import { Crop, Calculator, LayoutDashboard, FolderLock } from 'lucide-react';
+import { Crop, Calculator, LayoutDashboard, FolderLock, Music2 } from 'lucide-react';
 
 export interface AppInfo {
   id: string;
@@ -91,5 +91,24 @@ export const appsData: AppInfo[] = [
     version: '1.0.0',
     releaseDate: 'July 2026',
     color: 'from-blue-400 to-indigo-600',
+  },
+  {
+    id: 'gaan',
+    name: 'Gaan',
+    shortDescription: 'Ad-free music streaming with synced lyrics, lossless audio & song recognition.',
+    fullDescription: 'Gaan is a feature-rich, open-source Android music app that delivers a seamless, premium listening experience. Powered by YouTube Music\'s vast catalog, Gaan strips away the ads and adds powerful extras: offline downloads, word-by-word synchronized lyrics, lossless 24-bit FLAC playback, and Echo Find — an on-device audio recognition engine that identifies any song playing around you.',
+    icon: Music2,
+    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800',
+    features: [
+      'Ad-free streaming with lossless 24-bit FLAC audio',
+      'Synced lyrics with transliteration & AI translation',
+      'Echo Find on-device song recognition',
+      'Listen Together — real-time synced playback with friends'
+    ],
+    techStack: ['Kotlin', 'Jetpack Compose', 'Media3', 'Room', 'Ktor', 'ShazamKit'],
+    downloadUrl: 'https://github.com/rumman2004/Gaan/releases/latest/download/Gaan.apk',
+    version: '1.0.0',
+    releaseDate: 'August 2026',
+    color: 'from-emerald-400 to-green-700',
   }
 ];

@@ -5,6 +5,18 @@ import antinodeHome     from '../assets/app-Interfaces/Antinode/Antinode-home.pn
 import antinodeFolders  from '../assets/app-Interfaces/Antinode/Antinode-folders.png';
 import antinodeProfile  from '../assets/app-Interfaces/Antinode/Aninode-userprofile.png';
 
+// --- Gaan (local assets) ---
+import gaanIcon         from '../assets/app-icons/Gaan.png';
+import gaanIconTrans    from '../assets/app-icons/Gaan-transparent.png';
+import gaanQR           from '../assets/app-icons/Gaan-QR.png';
+import gaanHome         from '../assets/app-Interfaces/Gaan/Home.png';
+import gaanLibrary      from '../assets/app-Interfaces/Gaan/Library.png';
+import gaanNowPlaying   from '../assets/app-Interfaces/Gaan/Now Playing.png';
+import gaanRecognize    from '../assets/app-Interfaces/Gaan/Recognize.png';
+import gaanSearch       from '../assets/app-Interfaces/Gaan/Search page.png';
+import gaanLyrics       from '../assets/app-Interfaces/Gaan/lyrics.png';
+import gaandesktop      from '../assets/app-Interfaces/Gaan/Desktop-2.png';
+
 // --- Planix ---
 const planixLogo = 'https://res.cloudinary.com/dtbytfxzs/image/upload/v1778440321/Planix_icon_fmjrxh.png';
 const planixHomePage = 'https://res.cloudinary.com/dtbytfxzs/image/upload/v1778440359/Plainx_Home_Page_b06gre.jpg';
@@ -71,6 +83,18 @@ export const Images = {
     home: antinodeHome,
     folders: antinodeFolders,
     profile: antinodeProfile,
+  },
+  gaan: {
+    icon: gaanIcon,
+    iconTrans: gaanIconTrans,
+    qr: gaanQR,
+    desktop: gaandesktop,
+    home: gaanHome,
+    library: gaanLibrary,
+    nowPlaying: gaanNowPlaying,
+    recognize: gaanRecognize,
+    search: gaanSearch,
+    lyrics: gaanLyrics,
   },
   general: {
     heroIphone: heroIphoneMockup,

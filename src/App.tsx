@@ -8,6 +8,7 @@ import DrCrop from './pages/App-Pages/DrCrop';
 import MyCalculator from './pages/App-Pages/MyCalculator';
 import Planix from './pages/App-Pages/Planix';
 import Antinode from './pages/App-Pages/Antinode';
+import Gaan from './pages/App-Pages/Gaan';
 
 // Component to scroll to top on route change
 function ScrollToTop() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="apps/my-calculator" element={<MyCalculator />} />
           <Route path="apps/planix" element={<Planix />} />
           <Route path="apps/antinode" element={<Antinode />} />
+          <Route path="apps/gaan" element={<Gaan />} />
         </Route>
       </Routes>
     </Router>
