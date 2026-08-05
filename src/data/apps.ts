@@ -99,7 +99,7 @@ export const appsData: AppInfo[] = [
     shortDescription: 'Ad-free music streaming with synced lyrics, lossless audio & song recognition.',
     fullDescription: 'Gaan is a feature-rich, open-source Android music app that delivers a seamless, premium listening experience. Powered by YouTube Music\'s vast catalog, Gaan strips away the ads and adds powerful extras: offline downloads, word-by-word synchronized lyrics, lossless 24-bit FLAC playback, and Echo Find — an on-device audio recognition engine that identifies any song playing around you.',
     icon: Music2,
-    image: Images.gaan.desktop,
+    image: Images.gaan.icon,
     features: [
       'Ad-free streaming with lossless 24-bit FLAC audio',
       'Synced lyrics with transliteration & AI translation',
