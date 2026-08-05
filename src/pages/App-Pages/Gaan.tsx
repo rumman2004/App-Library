@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   ChevronLeft, Download, ArrowUpRight, Code2,
   Volume2, Fingerprint, Languages, Users,
-  Smartphone, Headphones, Globe, Sparkles,
+  Headphones, Globe, Sparkles,
   Music,
 } from 'lucide-react';
 import { FaDiscord, FaTelegramPlane } from 'react-icons/fa';
