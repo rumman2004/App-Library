@@ -15,8 +15,8 @@ const stats = [
   { icon: Star,      label: 'Stars',     value: 12,  suffix: '' },
   { icon: GitFork,   label: 'Forks',     value: 4,  suffix: '' },
   { icon: Users,     label: 'Followers', value: 7,  suffix: '' },
-  { icon: GitCommit, label: 'Commits',   value: 432, suffix: '+' },
-  { icon: Code2,     label: 'Repos',     value: 30,  suffix: '' },
+  { icon: GitCommit, label: 'Commits',   value: 600, suffix: '+' },
+   { icon: Code2,     label: 'Repos',     value: 40,  suffix: '' },
 ];
 
 const techBadges = ['React Native', 'TypeScript', 'ML / AI'];
