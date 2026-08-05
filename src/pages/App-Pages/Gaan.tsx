@@ -140,15 +140,13 @@ const Gaan = () => {
       const strip = document.querySelector('.gn-mq-inner');
       if (strip) gsap.to(strip, { x: '-50%', duration: 28, ease: 'none', repeat: -1 });
 
-      // ── carousel screenshots scale ──
-      gsap.utils.toArray('.gn-ss-card').forEach((el: any) => {
-        gsap.fromTo(el,
-          { scale: 0.9, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.4)',
-            scrollTrigger: { trigger: el, start: 'top 92%', toggleActions: 'play none none none' },
-          }
-        );
-      });
+      // ── carousel screenshots reveal ──
+      gsap.fromTo('.gn-carousel-wrap',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+          scrollTrigger: { trigger: '.gn-carousel-wrap', start: 'top 85%', toggleActions: 'play none none none' },
+        }
+      );
 
     }, pageRef);
 
@@ -538,18 +536,36 @@ const Gaan = () => {
           margin-bottom: 1.25rem;
         }
 
-        /* ═══════════ SCREENSHOT CAROUSEL ═══════════ */
-        .gn-carousel {
-          display: flex; gap: 20px;
-          overflow-x: auto; scroll-snap-type: x mandatory;
-          padding: 2rem clamp(1.25rem, 5vw, 3rem) 2rem;
-          scrollbar-width: none;
-          -ms-overflow-style: none;
+        /* ═══════════ SCREENSHOT CAROUSEL (INFINITE) ═══════════ */
+        .gn-carousel-wrap {
+          overflow: hidden;
+          padding: 2rem 0;
+          position: relative;
         }
-        .gn-carousel::-webkit-scrollbar { display: none; }
+        .gn-carousel-wrap::before, .gn-carousel-wrap::after {
+          content: ''; position: absolute; top: 0; bottom: 0;
+          width: clamp(20px, 8vw, 100px); z-index: 2; pointer-events: none;
+        }
+        .gn-carousel-wrap::before {
+          left: 0; background: linear-gradient(to right, var(--gn-bg), transparent);
+        }
+        .gn-carousel-wrap::after {
+          right: 0; background: linear-gradient(to left, var(--gn-bg), transparent);
+        }
+        .gn-carousel-inner {
+          display: flex; gap: 20px;
+          width: max-content;
+          animation: gn-scroll-inf 40s linear infinite;
+        }
+        .gn-carousel-inner:hover {
+          animation-play-state: paused;
+        }
+        @keyframes gn-scroll-inf {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-50% - 10px)); }
+        }
         .gn-ss-card {
           flex: 0 0 auto;
-          scroll-snap-align: center;
           display: flex; flex-direction: column; align-items: center; gap: 1rem;
         }
         .gn-ss-card img {
@@ -886,13 +902,15 @@ const Gaan = () => {
             </div>
           </div>
 
-          <div className="gn-carousel" ref={carouselRef}>
-            {SCREENSHOTS.map(({ key, src, label }) => (
-              <div key={key} className="gn-ss-card">
-                <img src={src} alt={label} draggable={false} />
-                <span className="gn-ss-label">{label}</span>
-              </div>
-            ))}
+          <div className="gn-carousel-wrap" ref={carouselRef}>
+            <div className="gn-carousel-inner">
+              {[...SCREENSHOTS, ...SCREENSHOTS].map(({ key, src, label }, index) => (
+                <div key={`${key}-${index}`} className="gn-ss-card">
+                  <img src={src} alt={label} draggable={false} />
+                  <span className="gn-ss-label">{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
